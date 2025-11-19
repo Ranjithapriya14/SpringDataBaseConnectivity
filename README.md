@@ -123,9 +123,9 @@ SpringDataBaseConnectivity/
 ```xml
 <bean id="dataSource" class="org.springframework.jdbc.datasource.DriverManagerDataSource">
     <property name="driverClassName" value="com.mysql.cj.jdbc.Driver" />
-    <property name="url" value="jdbc:mysql://localhost:3306/spring_demo" />
-    <property name="username" value="root" />
-    <property name="password" value="your_password" />
+    <property name="url" value="jdbc:mysql://localhost:3306/java1"></property>
+    <property name="username" value="root"></property>
+    <property name="password" value="Ranjurp1408@"></property>
 </bean>
 
 <bean id="jdbcTemplate" class="org.springframework.jdbc.core.JdbcTemplate">
@@ -151,23 +151,13 @@ SpringDataBaseConnectivity/
 
 ### ➕ Insert Record
 
-```java
-String sql = "INSERT INTO users(name, email) VALUES (?, ?)";
-jdbcTemplate.update(sql, "John Doe", "john@gmail.com");
-```
-
 ### 📌 Fetch All Records
 
 ```java
-List<User> list = jdbcTemplate.query("SELECT * FROM users", new UserRowMapper());
+List<User> list = jdbcTemplate.query("SELECT * FROM studen", new UserRowMapper());
 ```
 
 ### ✏️ Update Record
-
-```java
-String sql = "UPDATE users SET email=? WHERE id=?";
-jdbcTemplate.update(sql, "new@gmail.com", 1);
-```
 
 ### ❌ Delete Record
 
@@ -242,12 +232,5 @@ Contributions are welcome!
 2. Create a new branch
 3. Commit changes
 4. Open a pull request
-
----
-
-## 📄 License
-
-This project is licensed under the **MIT License**.
-You are free to use, modify, and distribute.
 
 ---
